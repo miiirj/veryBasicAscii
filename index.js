@@ -32,8 +32,6 @@ function getImageFromInput(input) {
 }
 
 function doTheAscii(imageData) {
-    console.log(imageData);
-    console.log("grayscale", getGrayScaleImageData(imageData));
     let grayScale = getGrayScaleImageData(imageData);
 
     let grayScaleCanvas = document.getElementById("grayScaleCanvas");
@@ -59,8 +57,6 @@ function drawAscii(canvas2d) {
             } else {
                 asciiString += "  ";
             }
-
-            console.log("test");
         }
         asciiString += "\n";
     }
