@@ -5,12 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        textarea {
+            width: 100%;
+            height: 95vh;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            font-size: 12px;
+            resize: none;
+        }
+    </style>
 </head>
 <body>
     <input type="file" name="image" accept="image/*" capture='environment' onchange="getImageFromInput(this)"></input>
     <div>
-        <canvas id="imageCanvas" ></canvas>
-        <canvas id="grayScaleCanvas" ></canvas>
+        <canvas style="display:none; visibility: hidden;" id="imageCanvas" ></canvas>
+        <canvas style="display:none; visibility: hidden;" id="grayScaleCanvas" ></canvas>
     </div>
 
     <textarea id="output">
